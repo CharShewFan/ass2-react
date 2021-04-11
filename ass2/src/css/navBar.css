@@ -1,0 +1,29 @@
+.navigation{
+    height: 56px;
+    width: 100%;
+    background-color: #282c34;
+    color: #fff;
+    position: sticky;
+}
+
+.navigation .brandName{
+
+}
+
+.navigation .linkBox{
+    float: right;
+    display: flex;
+}
+
+.navigation a{
+    display: block;
+    text-decoration: none;
+    line-height: 56px;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.brandName{
+    float: left;
+    margin-left: 20px;
+}

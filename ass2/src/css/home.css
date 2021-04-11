@@ -1,0 +1,50 @@
+
+
+.blockOne {
+    width: 100%;
+    background-color: gainsboro;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blockTwo {
+    width: 100%;
+    background-color: #61dafb;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.blockOne .events{
+    display: block;
+    width: 80px;
+    height: 30px;
+    border: 1px ;
+    border-radius: 10px;
+    color: #282c34;
+    background-color: #FF4081;
+}
+
+.blockOne .events a :active{
+    color: red;
+}
+
+.blockTwo .joinUs{
+    display: block;
+    width: 80px;
+    height: 30px;
+    background-color: #90CAF9
+;
+}
+
+
+
+
+.blockTwo .joinUs{
+    border: 1px  ;
+    border-radius: 10px;
+}
