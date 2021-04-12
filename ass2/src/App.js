@@ -1,7 +1,5 @@
-
-import './App.css';
-import NavBar from './components/NavBar'
 import Home from "./view/Home";
+
 
 function App() {
   return (

@@ -1,18 +1,17 @@
-//import navBar from '../css/navBar.css'
-import home from '../css/home.css'
+import HomeStyle from '../css/home.css'
+import Container from '@material-ui/core/Container';
 import NavBar from "../components/NavBar";
+import Button from '@material-ui/core/Button'
 
 function Home(){
     return(
-        <div>
-            <NavBar style={"margin-bottom:0px"} />
-            <div className={"blockOne"}>
-                <button className={"events"} type={"button"}><a href="/">Events</a></button>
-            </div>
+        <div className="Home">
+            <NavBar/>
+            <Container className="block-1">
+                <Button variant="contained" color="secondary">Events</Button>
+            </Container>
 
-            <div className={"blockTwo"}>
-                <button className={"joinUs"} ><a href="/">Join Us</a></button>
-            </div>
+            <Container className="block-2"></Container>
         </div>
 
     )
