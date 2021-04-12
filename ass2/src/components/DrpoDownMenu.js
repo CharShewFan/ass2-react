@@ -3,9 +3,22 @@ import React from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
+import { makeStyles } from '@material-ui/core/styles';
+
 
 
  function DropDownMenu() {
+    //styling
+    const useStyle = makeStyles({
+      hanberg:{
+        color:"white"
+      }
+    });
+    
+    const classes  = useStyle();
+
+
+
     const [anchorEl, setAnchorEl] = React.useState(null);
   
     const handleClick = (event) => {
@@ -18,7 +31,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 
     return(
         <div>
-           <IconButton aria-haspopup="true" onClick={handleClick}>
+           <IconButton aria-haspopup="true" onClick={handleClick} className={classes.hanberg}>
                <MenuIcon></MenuIcon>
            </IconButton>
        
