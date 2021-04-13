@@ -1,8 +1,15 @@
 
 import Container from '@material-ui/core/Container';
-import NavBar from "../components/NavBar";
+//import NavBar from "../components/NavBar";
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles';
+import Event from '../view/Event'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom"
 
 
 function Home(){
@@ -43,16 +50,20 @@ function Home(){
     const classes = useStyle();
 
     return(
+      
         <div className="Home">
-            <NavBar className={classes.navbar}/>
+          
             <Container className={classes.block1}>
-                <Button variant="contained" color="secondary" className={classes.btn1}>Events</Button>
+                <Button variant="contained" color="secondary" className={classes.btn1}><Link to="/event">Events</Link></Button>
             </Container>
 
             <Container className={classes.block2}>
-                <Button variant="contained" color="primary" className={classes.btn2}>Join Us</Button>
+                <Button variant="contained" color="primary" className={classes.btn2}><Link to="/event">Join Us</Link></Button>
             </Container>
         </div>
+
+       
+
 
     )
 }

@@ -7,6 +7,14 @@ import React from 'react'
 import DropDownMenu from './DrpoDownMenu'
 import { makeStyles } from '@material-ui/core/styles';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from '../view/Home';
+import Event from '../view/Event'
 
 
 
@@ -52,24 +60,25 @@ function NavBar(){
     const classes = useStyle();
 
     return(
+       
+
+       
         <div>
            
             <AppBar className={classes.AppBar}>
                 <Toolbar className={classes.Toolbar}>
-                    <Typography variant="h6">MockEvent.com</Typography>
+                    <Typography variant="h6"><Link to='/'>MockEvent.com</Link></Typography>
                     <div className={classes.btnGroup}>
-                        <Button className={classes.btn1}>Home</Button>
-                        <Button className={classes.btn2}>Events </Button>
+                        <Button className={classes.btn1}><Link to="/">Home</Link></Button>
+                        <Button className={classes.btn2}><Link to="/event">Event</Link> </Button>
                         <DropDownMenu/>
                     </div>
-               
-                    
-
-
                 </Toolbar>
             </AppBar>
 
         </div>
+
+
     );
 }
 

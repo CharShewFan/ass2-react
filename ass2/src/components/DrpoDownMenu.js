@@ -4,6 +4,15 @@ import MenuIcon from '@material-ui/icons/Menu'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import { makeStyles } from '@material-ui/core/styles';
+import Event from '../view/Event'
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 
@@ -12,6 +21,10 @@ import { makeStyles } from '@material-ui/core/styles';
     const useStyle = makeStyles({
       hanberg:{
         color:"white"
+      },
+
+      link:{
+        color:"#000"
       }
     });
     
@@ -30,6 +43,7 @@ import { makeStyles } from '@material-ui/core/styles';
     };
 
     return(
+      
         <div>
            <IconButton aria-haspopup="true" onClick={handleClick} className={classes.hanberg}>
                <MenuIcon></MenuIcon>
@@ -42,10 +56,12 @@ import { makeStyles } from '@material-ui/core/styles';
             open={Boolean(anchorEl)}
             onClose={handleClose}
            >
-               <MenuItem onClick={handleClose}>Log In</MenuItem>
-               <MenuItem onClick={handleClose}>User Info</MenuItem>
+               <MenuItem onClick={handleClose}><Link to="/event" className={classes.link}>Log In</Link>   </MenuItem>
+               <MenuItem onClick={handleClose}><Link to="/event" className={classes.link}>User Info</Link></MenuItem>
            </Menu>
-       </div>           
+       </div> 
+
+              
    
     )
    
