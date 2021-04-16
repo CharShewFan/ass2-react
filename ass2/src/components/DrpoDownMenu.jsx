@@ -56,8 +56,8 @@ import {
             open={Boolean(anchorEl)}
             onClose={handleClose}
            >
-               <MenuItem onClick={handleClose}><Link to="/event" className={classes.link}>Log In</Link>   </MenuItem>
-               <MenuItem onClick={handleClose}><Link to="/event" className={classes.link}>User Info</Link></MenuItem>
+               <MenuItem onClick={handleClose}><Link to="/user" className={classes.link}>Log In</Link>   </MenuItem>
+               <MenuItem onClick={handleClose}><Link to="/user" className={classes.link}>User Info</Link></MenuItem>
            </Menu>
        </div> 
 

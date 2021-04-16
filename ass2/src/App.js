@@ -1,11 +1,13 @@
 import Home from "./view/Home";
 import NavBar from './components/NavBar'
 import Event from './view/Event'
+import User from './view/User'
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from 'react-router-dom'
 
 
@@ -24,6 +26,10 @@ function App() {
 
                   <Route path="/event" exact>
                     <Event/>
+                  </Route>
+
+                  <Route path="/user">
+                    <User/>
                   </Route>
               </Switch>
             </div>

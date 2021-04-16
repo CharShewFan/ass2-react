@@ -69,7 +69,7 @@ function NavBar(){
                 <Toolbar className={classes.Toolbar}>
                     <Typography variant="h6"><Link to='/'>MockEvent.com</Link></Typography>
                     <div className={classes.btnGroup}>
-                        <Button className={classes.btn1}><Link to="/">Home</Link></Button>
+                        <Button className={classes.btn1}><Link to="/user">Home</Link></Button>
                         <Button className={classes.btn2}><Link to="/event">Event</Link> </Button>
                         <DropDownMenu/>
                     </div>
