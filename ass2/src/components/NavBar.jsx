@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import React from 'react'
 import DropDownMenu from './DrpoDownMenu'
 import { makeStyles } from '@material-ui/core/styles';
+import {Hidden} from "@material-ui/core"
 
 import {
   Link
@@ -64,8 +65,11 @@ function NavBar(){
                 <Toolbar className={classes.Toolbar}>
                     <Typography variant="h6"><Link to='/'>MockEvent.com</Link></Typography>
                     <div className={classes.btnGroup}>
-                        <Button className={classes.btn1}><Link to="/user">Home</Link></Button>
+                        <Hidden smDown>
+                        <Button className={classes.btn1}><Link to="/">Home</Link></Button>
                         <Button className={classes.btn2}><Link to="/event">Event</Link> </Button>
+                        </Hidden>
+               
                         <DropDownMenu/>
                     </div>
                 </Toolbar>

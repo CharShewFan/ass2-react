@@ -4,6 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import { makeStyles } from '@material-ui/core/styles';
+import {Hidden,Button} from "@material-ui/core"
 
 
 import {
@@ -53,6 +54,10 @@ import {
             open={Boolean(anchorEl)}
             onClose={handleClose}
            >
+             <Hidden mdUp>
+             <MenuItem onClick={handleClose}><Link to="/" className={classes.link}>Home</Link></MenuItem>
+             <MenuItem onClick={handleClose}><Link to="/event" className={classes.link}>Event</Link>   </MenuItem>
+             </Hidden>
                <MenuItem onClick={handleClose}><Link to="/user" className={classes.link}>Log In</Link>   </MenuItem>
                <MenuItem onClick={handleClose}><Link to="/user" className={classes.link}>User Info</Link></MenuItem>
            </Menu>
