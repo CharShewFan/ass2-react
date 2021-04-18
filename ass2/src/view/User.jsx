@@ -3,7 +3,7 @@ import Registration from "../components/Registration"
 
 function User(){
     return(
-        <div>
+        <div className="userBox" style={{marginTop:"200px"}} >
             <div className="registration">
                 <Registration/>
             </div>
