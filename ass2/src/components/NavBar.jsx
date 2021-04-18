@@ -2,19 +2,14 @@ import AppBar from '@material-ui/core/AppBar/index';
 import Toolbar from '@material-ui/core/Toolbar/Toolbar'
 import Typography from '@material-ui/core/Typography/Typography'
 import Button from '@material-ui/core/Button'
-//import ButtonGroup from '@material-ui/core/ButtonGroup'
 import React from 'react'
 import DropDownMenu from './DrpoDownMenu'
 import { makeStyles } from '@material-ui/core/styles';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
-import Home from '../view/Home';
-import Event from '../view/Event'
+
 
 
 

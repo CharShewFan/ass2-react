@@ -3,11 +3,7 @@ import Container from '@material-ui/core/Container';
 //import NavBar from "../components/NavBar";
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles';
-import Event from './Event'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom"
 

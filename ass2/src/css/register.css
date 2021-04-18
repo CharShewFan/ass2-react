@@ -1,0 +1,31 @@
+.paper{
+    width: 400px;
+    margin:200px auto;
+}
+
+.containers{
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    margin:200px auto;
+  
+}
+
+.containers h3{
+    padding-top: 40px;
+    color:#0d47a1
+}
+
+.containers form{
+    align-items:center ;
+    height: 350px;
+}
+
+.containers .item{
+    margin: 35px auto 0 auto;
+}
+
+.containers .btn{
+    display: block;
+    margin: 20px auto 0 auto;
+}

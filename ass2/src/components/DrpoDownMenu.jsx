@@ -4,13 +4,10 @@ import MenuIcon from '@material-ui/icons/Menu'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import { makeStyles } from '@material-ui/core/styles';
-import Event from '../view/Event'
 
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+
   Link
 } from "react-router-dom";
 

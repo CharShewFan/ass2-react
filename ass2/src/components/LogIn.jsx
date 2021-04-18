@@ -1,22 +1,30 @@
-import TextField from "@material-ui/core/TextField"
-import Input from "@material-ui/core/Input"
-import {Button} from "@material-ui/core"
+
+import {Button, TextField} from "@material-ui/core"
 import axios from "axios"
-import  Container from "@material-ui/core/Container"
-import React, {useState} from 'react'
+import React from 'react'
+// eslint-disable-next-line no-unused-vars
+import loginCss from "../css/login.css"
+
+
+
+
+
+
+
 
 
 
  class LogIn extends React.Component{
+   
     constructor(props){
         super(props);
        this.handleGetInputValue = this.handleGetInputValue.bind(this)
        this.handlePassword = this.handlePassword.bind(this)
-       this.testing = this.testing.bind(this)
         this.state = {
             email:"",
             password:"",
-            testing:""
+            response:"",
+            
         };
    
        
@@ -27,47 +35,54 @@ import React, {useState} from 'react'
             email : event.target.value,
             
         })
-    }
+    };
 
     handlePassword = function(event){
         this.setState({
             password:event.target.value
         })
-    }
+    };
      submit = async function(email,password){
         
          try{
-             const respose =  await axios.post("/user/login",{
+             const data =  await axios.post("/user/login",{
                 "email":this.state.email,
                 "password":this.state.password
             })
-            console.log(respose)
+            this.setState({respose : data})
          }catch(e){
              console.log(e)
          }
 
     };
 
-    testing = function(e){
-        if(e) e.preventDefault();
-        const valueTemp = this.inputValue.value;
-        console.log(valueTemp, '------valueTemp');
-    }
 
     render() {
         return(
-            <Container className="container">
+            <div className="container">
+
             <form className="loginForm" noValidate autoComplete="off">
-                <label htmlFor="email">E-mail:</label>
-                <Input placeholder="E-mail" type="email"  value={this.state.email} id="email"  onInput={this.handleGetInputValue}></Input>
-                <label htmlFor="password">Password:</label>
-                <Input placeholder="Password" type="password"  value={this.state.password}  onChange={()=>this.handlePassword()}></Input>
-                <Input placeholder="testing"  onChange={(event)=>{this.setState({testing:event.target.value})}}></Input>
+                <div className="item">
+                <TextField  placeholder="E-mail" type="email" required id="outlined-required"  variant="outlined" value={this.state.email}   onInput={this.handleGetInputValue}></TextField>
+                </div>
+
+                <div className="item">
+               
+                <TextField  placeholder="password" required id="outlined-required"  variant="outlined" type="password"  value={this.state.password}  onChange={()=>this.handlePassword()}></TextField>
+                </div>
             </form>
-            <Button onclick={this.submit.bind(this.email,this.password)} size="medium" variant="contained" color="primary">Submit</Button>  
+
+
+            <div className="btnWrapper">            
+                <Button onclick={()=>{this.submit()}} size="medium" variant="contained" color="primary" className="btn">Log In</Button>  
+            </div>
+
+            <div className="dataview">
+                <h4>login Info:{this.state.response}</h4>
+            </div>
    
 
-            </Container>
+            </div>
 
         )
 
@@ -75,5 +90,3 @@ import React, {useState} from 'react'
 }
 
 export default LogIn
-
-//ref={(p)=>{this.password = p}} 

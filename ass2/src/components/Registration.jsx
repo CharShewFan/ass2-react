@@ -1,5 +1,8 @@
 import axios from "axios";
-import React from "react"
+import React from "react";
+import {Button, TextField,Paper} from "@material-ui/core"
+// eslint-disable-next-line no-unused-vars
+import registerCSS from "../css/register.css"
 
 
 
@@ -41,16 +44,32 @@ export default class Registration extends React.Component{
 
     render(){
         return(
-            <div>
-                registration
+            <Paper elevation={8} className="paper">
+            <div className="containers">
+                <h3>registration</h3>
                 <form>
-                    <label htmlFor="userName" ></label><input type="text" id="userName" onChange={(e)=>{this.setState({firstname:e.target.value})}}/>
-                    <label htmlFor="lastname"></label><input type="text" id="lastname" onChange={(e)=>{this.setState({lastname:e.target.value})}}/>
-                    <label htmlFor="userEmail" ></label><input type="text" id="userEmail" onChange={(e)=>{this.setState({email:e.target.value})}}/>
-                    <label htmlFor="pssword"></label><inpit type="password" onChange={(e)=>{this.setState({password:e.target.value})}}></inpit>
-                    <input type="button" onClick={()=>{this.handleClick()}}/>
+                    
+                    <div className="item">
+                    <TextField placeholder="First Name" variant="outlined" type="text" id="firstname"  onChange={(e)=>{this.setState({firstname:e.target.value})}}/>
+                    </div>
+               
+      
+
+                    <div className="item">
+                    <TextField placeholder="Last Name" variant="outlined" type="text" id="lastname"  onChange={(e)=>{this.setState({lastname:e.target.value})}}/>
+
+                    </div>
+                    <div className="item">
+                    <TextField placeholder="E-mail" variant="outlined" type="text" id="userEmail"  onChange={(e)=>{this.setState({email:e.target.value})}}/>
+                    </div>
+                    <div className="item">
+                    <TextField placeholder="Password" variant="outlined" type="password"  onChange={(e)=>{this.setState({password:e.target.value})}} />
+                    </div>
+                    
                 </form>
+                <Button  className="btn" variant="contained" color="primary" onClick={()=>{this.handleClick()}}>Submit</Button>
             </div>
+            </Paper>
         )
     }
     
